@@ -3,6 +3,8 @@ const cors = require("cors");
 const mongodb = require("mongodb");
 const mongoose = require("mongoose");
 require("dotenv").config();
+const { userRouter: authRouter } = require("./routes/users");
+const recipeRouter = require("./routes/recipes.js");
 
 const app = express();
 
@@ -23,4 +25,7 @@ mongoose
 		console.error("MongoDB connection failed:", error.message);
 		process.exit(1);
 	});
+	
+app.use("/auth", authRouter);
+app.use("/recipe", recipeRouter);
 
