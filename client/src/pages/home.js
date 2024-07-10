@@ -251,7 +251,7 @@ export const Home = () => {
 								onClick={() => openModal(recipe)}
 							>
 								<h2>{recipe.title}</h2>
-								<img src={recipe.image} alt={recipe.title} />
+								{/* <img src={recipe.image} alt={recipe.title} /> */}
 								<p>
 									Difficulty level:{" "}
 									<span className="difficulty">

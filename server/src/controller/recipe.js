@@ -43,13 +43,13 @@ exports.postRecipe = async (req, res) => {
 };
 
 
-exports.uploadImage = async (req, res) => {
-	try {
-		res.status(201).json({ imagePath: `/images/${req.file.filename}` });
-	} catch (error) {
-		res.status(500).json({ message: error.message });
-	}
-}
+// exports.uploadImage = async (req, res) => {
+// 	try {
+// 		res.status(201).json({ imagePath: `/images/${req.file.filename}` });
+// 	} catch (error) {
+// 		res.status(500).json({ message: error.message });
+// 	}
+// }
 
 
 exports.updateSaveRecipe = async (req, res) => {

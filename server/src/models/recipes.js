@@ -48,10 +48,10 @@ const recipeSchema = new mongoose.Schema(
 			required: true,
 			enum: ["easy", "medium", "hard"],
 		},
-		image: {
-		    type: String,
-		    required: true
-		},
+		// image: {
+		//     type: String,
+		//     required: true
+		// },
 		tags: [String],
 		
 		userOwner: {

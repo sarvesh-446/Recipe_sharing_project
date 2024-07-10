@@ -84,20 +84,20 @@ export const PostRecipe = ({ recipeData, onClose }) => {
 		});
 	};
 
-	const uploadImage = async () => {
-		const formData = new FormData();
-		formData.append("file", file);
-		const response = await axios.post(
-			"http://localhost:3001/recipe/upload-image",
-			formData,
-			{
-				headers: {
-					"Content-Type": "multipart/form-data",
-				},
-			}
-		);
-		return response.data.imagePath;
-	};
+	// const uploadImage = async () => {
+	// 	const formData = new FormData();
+	// 	formData.append("file", file);
+	// 	const response = await axios.post(
+	// 		"http://localhost:3001/recipe/upload-image",
+	// 		formData,
+	// 		{
+	// 			headers: {
+	// 				"Content-Type": "multipart/form-data",
+	// 			},
+	// 		}
+	// 	);
+	// 	return response.data.imagePath;
+	// };
 
 	const onSubmit = async (event) => {
 		event.preventDefault();
@@ -105,7 +105,7 @@ export const PostRecipe = ({ recipeData, onClose }) => {
 		if (file) {
 			imagePath = await uploadImage();
 		}
-		const newRecipe = { ...recipe, image: imagePath };
+		const newRecipe = { ...recipe };
 		const options = {
 			method: recipeData ? "PUT" : "POST",
 			url: recipeData
@@ -325,7 +325,7 @@ export const PostRecipe = ({ recipeData, onClose }) => {
 						<option value="hard">Hard</option>
 					</select>
 				</div>
-				<div className="form-group">
+				{/* <div className="form-group">
 					<label htmlFor="image">Image (Optional) </label>
 					<input
 						type="file"
@@ -338,7 +338,7 @@ export const PostRecipe = ({ recipeData, onClose }) => {
 							style={{ width: "100px", height: "100px" }}
 						/>
 					)}
-				</div>
+				</div> */}
 				<div className="form-group">
 					<label htmlFor="tags">Tags</label>
 					<input

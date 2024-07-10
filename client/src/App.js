@@ -1,15 +1,17 @@
+import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import './App.css';
 import { Home } from "./pages/home";
 import { Auth } from "./pages/auth";
 import { PostRecipe } from "./pages/post_recipe";
 import { MyRecipe } from "./pages/my_recipe";
 import { SavedRecipe } from "./pages/saved_Recipe";
+import Bar from "./component/bar";
 
 function App() {
-  return (
-    <div className="App">
-      <Router>
+	return (
+		<div className="App">
+			<Router>
+				<Bar />
 				<Routes>
 					<Route path="/" element={<Home />} />
 					<Route path="/auth" element={<Auth />} />
@@ -18,9 +20,8 @@ function App() {
 					<Route path="/saved_Recipe" element={<SavedRecipe />} />
 				</Routes>
 			</Router>
-      
-    </div>
-  );
+		</div>
+	);
 }
 
 export default App;

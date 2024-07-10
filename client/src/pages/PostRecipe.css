@@ -1,0 +1,158 @@
+/* post recipe css*/
+
+/* Container styles */
+.post-container {
+	max-width: 55%;
+	margin: 15px auto;
+	padding: 20px;
+	background-color: white;
+	border: 1px solid #ddd;
+	border-radius: 8px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Form styles */
+#recipe-form {
+	margin-top: 20px;
+}
+
+.form-group {
+	margin-bottom: 20px;
+}
+
+.form-group label {
+	text-align: left;
+	padding-left: 10px;
+	display: block;
+	font-weight: bold;
+	margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+	width: calc(100% - 20px);
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+	font-size: 16px;
+}
+
+.form-group select {
+	width: 100%;
+}
+
+.form-group textarea {
+	height: 120px;
+}
+
+.form-group button,
+.sub-button,
+.recipe-container button {
+	display: block;
+	margin-top: 10px;
+	padding: 10px 20px;
+	color: #fff;
+	background: #a3dfe7;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	font-size: 16px;
+}
+
+.form-group button:hover,
+.sub-button:hover,
+.recipe-container button:hover {
+	background-color: #1e8c9b;
+}
+
+/* File input style */
+.form-group input[type="file"] {
+	padding: 8px;
+}
+
+.ingredient {
+	display: flex; /* Use flexbox to align items in a row */
+	align-items: center; /* Center items vertically */
+	gap: 5px; /* Adjust the gap between items */
+	margin-bottom: 0px; /* Add margin at the bottom for spacing */
+	margin-left: 10px;
+}
+
+.ingredient input[type="text"] {
+	flex: 2; /* Larger input space for ingredient name */
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+	font-size: 16px;
+}
+
+.ingredient input[type="number"],
+.ingredient select {
+	flex: 1; /* Smaller input space for quantity and unit */
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+	font-size: 16px;
+}
+
+.ingredient select {
+	width: auto; /* Adjust width for select dropdown */
+}
+
+.ingredient button {
+	align-items: center;
+	margin-bottom: 7px;
+}
+
+.sub-button {
+	margin: auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 750px) {
+	.post-container {
+		max-width: 100%; /* Ensure it uses full width on smaller screens */
+		padding: 10px; /* Adjust padding for smaller screens */
+	}
+
+	.form-group input,
+	.form-group textarea,
+	.form-group select {
+		width: 100%; /* Ensure full width for inputs on smaller screens */
+	}
+
+	.form-group select > option {
+		white-space: normal;
+	}
+
+	.form-group .ingredient {
+		flex-direction: column;
+		align-items: center; /* Stack ingredients vertically on smaller screens */
+	}
+
+	.ingredient input[type="text"],
+	.ingredient input[type="number"],
+	.ingredient select {
+		width: 100%; /* Ensure full width for ingredient inputs on smaller screens */
+		flex: none; /* Reset flex properties */
+	}
+
+	.ingredient button {
+		margin-bottom: 5px; /* Ensure full width for buttons on smaller screens */
+		/* Add top margin for better spacing */
+	}
+	.form-group button:last-child {
+		margin-top: auto;
+	}
+}
+
+.recipe-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	gap: 60px;
+}
