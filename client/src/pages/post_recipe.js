@@ -22,10 +22,9 @@ export const PostRecipe = ({ recipeData, onClose }) => {
 		category: "american",
 		difficulty: "easy",
 		tags: "",
-		image: "",
 		userOwner: userID,
 	});
-	const [file, setFile] = useState();
+	
 	const [isEditing, setIsEditing] = useState(null);
 
 	useEffect(() => {
@@ -84,21 +83,7 @@ export const PostRecipe = ({ recipeData, onClose }) => {
 		});
 	};
 
-	// const uploadImage = async () => {
-	// 	const formData = new FormData();
-	// 	formData.append("file", file);
-	// 	const response = await axios.post(
-	// 		"http://localhost:3001/recipe/upload-image",
-	// 		formData,
-	// 		{
-	// 			headers: {
-	// 				"Content-Type": "multipart/form-data",
-	// 			},
-	// 		}
-	// 	);
-	// 	return response.data.imagePath;
-	// };
-
+	
 	const onSubmit = async (event) => {
 		event.preventDefault();
 		let imagePath = recipe.image;
@@ -218,7 +203,7 @@ export const PostRecipe = ({ recipeData, onClose }) => {
 								<option value="cup">cup</option>
 								<option value="tbsp">tbsp</option>
 								<option value="nos">nos</option>
-								{/* Add more units as needed */}
+								
 							</select>
 							{isEditing === index ? (
 								<>
@@ -308,7 +293,7 @@ export const PostRecipe = ({ recipeData, onClose }) => {
 						<option value="thai">Thai</option>
 						<option value="indian">Indian</option>
 						<option value="italian">Italian</option>
-						{/* Add more categories as needed */}
+						
 					</select>
 				</div>
 				<div className="form-group">
@@ -325,20 +310,7 @@ export const PostRecipe = ({ recipeData, onClose }) => {
 						<option value="hard">Hard</option>
 					</select>
 				</div>
-				{/* <div className="form-group">
-					<label htmlFor="image">Image (Optional) </label>
-					<input
-						type="file"
-						onChange={(e) => setFile(e.target.files[0])}
-					/>
-					{recipe.image && (
-						<img
-							src={`http://localhost:3001${recipe.image}`}
-							alt={recipe.title}
-							style={{ width: "100px", height: "100px" }}
-						/>
-					)}
-				</div> */}
+				
 				<div className="form-group">
 					<label htmlFor="tags">Tags</label>
 					<input
