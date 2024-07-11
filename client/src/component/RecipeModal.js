@@ -10,12 +10,7 @@ const RecipeModal = ({ selectedRecipe, closeModal }) => {
 						&times;
 					</span>
 					<h2>{selectedRecipe.title}</h2>
-					<div className="image-container">
-						<img
-							src={selectedRecipe.image}
-							alt={selectedRecipe.title}
-						/>
-					</div>
+					
 					<p>{selectedRecipe.description}</p>
 					<div className="ingredients-container">
 						<h3>Ingredients</h3>
