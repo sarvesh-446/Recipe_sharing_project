@@ -176,7 +176,7 @@ export const SavedRecipe = () => {
 							onClick={() => openModal(recipe)}
 						>
 							<h2>{recipe.title}</h2>
-							{/* <img src={recipe.image} alt={recipe.title} /> */}
+							
 							<p>
 								Difficulty level:{" "}
 								<span className="difficulty">
