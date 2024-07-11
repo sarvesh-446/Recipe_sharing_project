@@ -87,7 +87,6 @@ const Login = ({ toggleForm }) => {
 						value={password}
 						onChange={(event) => setPassword(event.target.value)}
 					/>
-					{/* <a href="#">Forgot password?</a> */}
 					<input type="submit" className="button" value="Login" />
 				</form>
 				<div className="signup">
